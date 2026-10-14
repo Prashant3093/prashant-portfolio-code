@@ -4,49 +4,49 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(/fonts/inter-400.woff2) format('woff2');
+  src: url(/prashant-portfolio-code/fonts/inter-400.woff2) format('woff2');
 }
 @font-face {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(/fonts/inter-500.woff2) format('woff2');
+  src: url(/prashant-portfolio-code/fonts/inter-500.woff2) format('woff2');
 }
 @font-face {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(/fonts/inter-600.woff2) format('woff2');
+  src: url(/prashant-portfolio-code/fonts/inter-600.woff2) format('woff2');
 }
 @font-face {
   font-family: 'JetBrains Mono';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(/fonts/jetbrains-mono-400.woff2) format('woff2');
+  src: url(/prashant-portfolio-code/fonts/jetbrains-mono-400.woff2) format('woff2');
 }
 @font-face {
   font-family: 'Space Grotesk';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(/fonts/space-grotesk-400.woff2) format('woff2');
+  src: url(/prashant-portfolio-code/fonts/space-grotesk-400.woff2) format('woff2');
 }
 @font-face {
   font-family: 'Space Grotesk';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(/fonts/space-grotesk-500.woff2) format('woff2');
+  src: url(/prashant-portfolio-code/fonts/space-grotesk-500.woff2) format('woff2');
 }
 @font-face {
   font-family: 'Space Grotesk';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(/fonts/space-grotesk-700.woff2) format('woff2');
+  src: url(/prashant-portfolio-code/fonts/space-grotesk-700.woff2) format('woff2');
 }
 
 :root{--bg:#f7f5ee;--surface:#efede5;--surface-2:#e6e4d9;--accent:#b83a24;--teal:#245b7c;--text:#192d45;--muted:#5d6570;--line:#d6d6cc;--gold:#8c650d;--button-text:#ffffff;--heading:'Space Grotesk',Arial,sans-serif;--body:'Inter',Arial,sans-serif;--mono:'JetBrains Mono',monospace;color-scheme:light}
