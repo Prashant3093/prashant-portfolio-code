@@ -33,6 +33,8 @@ export default function ContactForm() {
     }}>
       <input type="hidden" name="_subject" value={subject}/>
       <input type="hidden" name="_template" value="table"/>
+      <input type="hidden" name="_next" value={`${profile.domain}/`}/>
+      <input type="hidden" name="_url" value={`${profile.domain}/contact/`}/>
       <div className="contact-honeypot" aria-hidden="true"><label htmlFor="sender-website">Leave this field empty<input id="sender-website" name="_honey" tabIndex={-1} autoComplete="off"/></label></div>
       <div className="message-fields">
         <label htmlFor="sender-name">Your name <span>(required)</span><input id="sender-name" name="name" autoComplete="name" placeholder="Your name" required maxLength={100}/></label>
