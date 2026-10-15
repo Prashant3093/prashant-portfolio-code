@@ -1,7 +1,7 @@
 export const projects = [
   {
     "slug": "enterprise-data-engineering",
-    "title": "From scattered sources to a single source of insight.",
+    "title": "Data pipelines at Hills & Dales.",
     "shortTitle": "Enterprise Data Engineering",
     "category": "Data Engineering",
     "categories": [
@@ -9,8 +9,8 @@ export const projects = [
       "Data Analytics"
     ],
     "number": "01",
-    "eyebrow": "HILLS & DALES \u00b7 ENTERPRISE SYSTEMS",
-    "description": "An automated path from vendor APIs and Salesforce to Lakehouse models and Power BI reporting.",
+    "eyebrow": "HILLS & DALES · ENTERPRISE SYSTEMS",
+    "description": "Vendor APIs and Salesforce data, processed in Microsoft Fabric and reported in Power BI.",
     "role": "Data Engineer Intern / Data Analyst Intern",
     "technologies": [
       "Microsoft Fabric",
@@ -37,17 +37,17 @@ export const projects = [
       "Maintaining technical documentation and SOPs alongside changing workflows."
     ],
     "lessons": [
-      "Reliable reporting begins with traceable, maintainable data pipelines.",
-      "Business stakeholders need understandable metrics as much as technically sound infrastructure."
+      "Keeping raw, cleaned, and reporting data in separate layers makes transformations easier to trace.",
+      "Clear KPI definitions help teams use the same report consistently."
     ],
-    "limitations": "This is a high-level, anonymized account. The diagram is illustrative and contains no internal schemas, credentials, or employer records.",
-    "future": "Continue improving pipeline reliability, documentation, and the accessibility of organizational reporting.",
+    "limitations": "The architecture diagram is simplified. Internal schemas and organizational data are not public.",
+    "future": "Improve pipeline reliability, documentation, and reporting access.",
     "visual": "architecture",
     "github": null
   },
   {
     "slug": "household-financial-stress-testing",
-    "title": "What happens when the economy puts households under pressure?",
+    "title": "Household financial stress testing.",
     "shortTitle": "Household Financial Stress-Testing",
     "category": "Finance",
     "categories": [
@@ -57,9 +57,9 @@ export const projects = [
       "Data Analytics"
     ],
     "number": "02",
-    "eyebrow": "CAPSTONE \u00b7 ECONOMIC RESEARCH",
-    "description": "A macroeconomic framework for understanding household income sensitivity and financial vulnerability.",
-    "role": "Student researcher \u00b7 financial stress-testing capstone",
+    "eyebrow": "CAPSTONE · ECONOMIC RESEARCH",
+    "description": "Studying how unemployment, inflation, and interest rates relate to household income.",
+    "role": "Student researcher · financial stress-testing capstone",
     "technologies": [
       "Python",
       "FRED API",
@@ -76,26 +76,26 @@ export const projects = [
       "Calibrate mild, moderate, and severe scenarios using four historical crisis periods and distributional percentile estimates."
     ],
     "results": [
-      "Completed the six-variable, 39-observation macroeconomic dataset and regression framework.",
-      "Developed three levels of historically informed stress scenarios.",
-      "The resume reports regime-dependent income sensitivity; numerical coefficients and full statistical outputs were not supplied."
+      "Built a six-variable dataset with 39 annual observations.",
+      "Created mild, moderate, and severe scenarios using four historical crisis periods.",
+      "Rolling regressions indicated that income sensitivity changed across periods; detailed estimates are not published here."
     ],
     "challenges": [
       "Aligning mixed-frequency economic series and testing changing relationships over time.",
       "Using a small annual sample without overstating causal conclusions."
     ],
     "lessons": [
-      "Robust standard errors and rolling windows help distinguish a stable assumption from one that depends on the economic regime.",
-      "Distributional scenarios can communicate uncertainty better than a single point estimate."
+      "Rolling regressions show how estimates change across periods.",
+      "Scenario ranges account for more uncertainty than a single estimate."
     ],
-    "limitations": "Only resume summaries were supplied. Coefficients, p-values, model diagnostics, and exact crisis windows are unavailable. Annual aggregation, sample size, and observational relationships limit interpretation. FRED is confirmed as used; SCF and PSID are proposed sources in the brief, with integration unverified.",
-    "future": "Validate SCF and PSID integration and explore household-level agent-based simulation or Monte Carlo stress modeling. These extensions are planned, not completed results.",
+    "limitations": "The sample contains only 39 annual observations. These are statistical associations, not proof of causation. Full regression tables and diagnostics are not published here. FRED data is included; SCF and PSID integration is not confirmed.",
+    "future": "Explore SCF and PSID household data, agent-based simulation, and Monte Carlo methods. These extensions are planned.",
     "visual": "methodology",
     "github": null
   },
   {
     "slug": "dubuque-street-conditions",
-    "title": "Reading a city through the condition of its streets.",
+    "title": "Dubuque street conditions.",
     "shortTitle": "Dubuque Street Network Condition Assessment",
     "category": "Data Analytics",
     "categories": [
@@ -104,8 +104,8 @@ export const projects = [
       "Research"
     ],
     "number": "03",
-    "eyebrow": "PUBLIC DATA \u00b7 GEOSPATIAL ANALYTICS",
-    "description": "A reproducible GIS pipeline examining pavement condition, maintenance, and data quality across Dubuque.",
+    "eyebrow": "PUBLIC DATA · GEOSPATIAL ANALYTICS",
+    "description": "A Python and GIS analysis of pavement ratings, maintenance, and missing data.",
     "role": "Project developer and analyst",
     "technologies": [
       "Python",
@@ -117,7 +117,7 @@ export const projects = [
     ],
     "problem": "Street condition records need cleaning and spatial context before they can support maintenance analysis.",
     "methods": [
-      "Process City of Dubuque public street-rating data covering 3,069 segments, 266 miles, and 2009\u20132021.",
+      "Process City of Dubuque public street-rating data covering 3,069 segments, 266 miles, and 2009–2021.",
       "Produce condition maps, an interactive web map, and a Power BI-ready model with DAX measures.",
       "Document 15+ data-quality issues and compare pavement wear and treated versus untreated segments."
     ],
@@ -132,17 +132,17 @@ export const projects = [
       "Interpreting incomplete lane counts and treatment comparisons."
     ],
     "lessons": [
-      "A map is only as defensible as the data-quality work behind it.",
-      "Missingness should be visible in a decision-making workflow."
+      "Placeholder zeros can distort condition summaries if treated as actual ratings.",
+      "Missing lane counts need to be accounted for when estimating a maintenance backlog."
     ],
-    "limitations": "Values are reported in Resume 2; underlying source files were not supplied here. The maintenance comparison should not be interpreted as a causal estimate without the project\u2019s controls.",
-    "future": "Further validate missing-data handling and extend the condition assessment as new public observations become available.",
+    "limitations": "The reported maintenance difference is a comparison between treated and untreated streets, not a causal estimate. The map shown here is illustrative.",
+    "future": "Check missing-data assumptions and update the analysis as new street ratings become available.",
     "visual": "street",
     "github": "https://github.com/Prashant3093/dubuque-street-conditions"
   },
   {
     "slug": "cash-flow-prediction",
-    "title": "A clearer view of the next twelve weeks.",
+    "title": "Twelve-week cash flow forecasting.",
     "shortTitle": "Cash Flow Prediction",
     "category": "Finance",
     "categories": [
@@ -151,8 +151,8 @@ export const projects = [
       "Data Analytics"
     ],
     "number": "04",
-    "eyebrow": "FORECASTING \u00b7 LIQUIDITY PLANNING",
-    "description": "Time-series forecasting and automated cash tracking for small-business liquidity planning.",
+    "eyebrow": "FORECASTING · LIQUIDITY PLANNING",
+    "description": "Forecasting receivables, payables, and net cash flow with Prophet and ARIMA.",
     "role": "Project developer",
     "technologies": [
       "Python",
@@ -171,24 +171,24 @@ export const projects = [
       "Automate inflow/outflow tracking and create financial dashboards."
     ],
     "results": [
-      "Resume-reported forecast accuracy: approximately 85%.",
-      "Resume-reported manual reporting reduction: 50%.",
-      "Resume-reported severe cash-level detection: 2\u20134 weeks ahead."
+      "Reported forecast accuracy: approximately 85%.",
+      "Reported reduction in manual reporting: 50%.",
+      "Reported warning time for severe cash-flow levels: 2–4 weeks."
     ],
     "challenges": [
       "Forecast quality depends on the completeness and stability of historical receivable and payable patterns."
     ],
     "lessons": [
-      "A useful forecast needs a clear planning horizon and an understandable dashboard."
+      "A twelve-week forecast needs to be paired with receivables and payables tracking to support liquidity planning."
     ],
-    "limitations": "Dataset, evaluation split, accuracy definition, model parameters, and original charts were not supplied. Reported accuracy is not an independently reproduced benchmark.",
-    "future": "Document backtesting, error metrics, and uncertainty intervals before comparing model performance.",
+    "limitations": "These performance figures are project estimates. The accuracy definition, validation split, and backtest results are not published here.",
+    "future": "Document backtesting, forecast errors, and prediction intervals.",
     "visual": "forecast",
     "github": null
   },
   {
     "slug": "personal-expense-forecast",
-    "title": "Finding the patterns behind everyday spending.",
+    "title": "Personal expense analysis and forecasting.",
     "shortTitle": "Personal Expense Visualization & Forecast",
     "category": "Machine Learning",
     "categories": [
@@ -197,8 +197,8 @@ export const projects = [
       "Data Analytics"
     ],
     "number": "05",
-    "eyebrow": "PERSONAL FINANCE \u00b7 APPLIED ML",
-    "description": "An offline Python dashboard combining transaction cleaning, categorization, and spending forecasts.",
+    "eyebrow": "PERSONAL FINANCE · APPLIED ML",
+    "description": "An offline Python dashboard for cleaning, categorizing, and forecasting transaction data.",
     "role": "Project developer",
     "technologies": [
       "Python",
@@ -214,16 +214,16 @@ export const projects = [
     ],
     "results": [
       "Processed more than 5,000 transactions.",
-      "Resume reports 90%+ forecasting accuracy across six spending categories."
+      "Reported forecasting accuracy above 90% across six spending categories."
     ],
     "challenges": [
-      "Consistent transaction categories and appropriate forecasting evaluation are essential to meaningful budget insights."
+      "Categorization errors affect both spending summaries and forecast evaluation."
     ],
     "lessons": [
-      "Offline workflows can keep personal financial data local while making spending patterns easier to inspect."
+      "An offline dashboard can analyze spending without uploading personal transaction records."
     ],
-    "limitations": "Original transactions, accuracy definition, validation method, and model outputs were not supplied. No personal transaction records are exposed in this portfolio.",
-    "future": "Document evaluation metrics and compare against a simple historical-spending baseline.",
+    "limitations": "The accuracy measure and validation method are not published here. No personal transaction records are shared on this site.",
+    "future": "Document validation and compare forecasts with a historical-spending baseline.",
     "visual": "expense",
     "github": null
   }

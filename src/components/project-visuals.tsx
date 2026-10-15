@@ -5,7 +5,7 @@ export function EngineeringVisual(){
  return <svg viewBox="0 0 600 340" className="engineering-visual">
   <defs><pattern id={`${id}-dots`} width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".8" fill="currentColor" opacity=".12"/></pattern><marker id={`${id}-arrow`} viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="var(--teal)"/></marker></defs>
   <rect width="600" height="340" fill={`url(#${id}-dots)`}/>
-  <text x="30" y="42" className="visual-micro">THE PATH FROM SOURCE TO INSIGHT</text>
+  <text x="30" y="42" className="visual-micro">DATA PIPELINE</text>
   <g className="visual-source-box">{['REST APIs','Salesforce','Other sources'].map((label,i)=><g key={label}><rect x="30" y={81+i*60} width="123" height="38" rx="7"/><circle cx="45" cy={100+i*60} r="3"/><text x="58" y={104+i*60}>{label}</text></g>)}</g>
   <g className="visual-pipeline" markerEnd={`url(#${id}-arrow)`}><path d="M153 100H190V215H247"/><path d="M153 160H190"/><path d="M153 220H190"/><path d="M450 114H499V238"/></g>
   <g className="visual-stack">

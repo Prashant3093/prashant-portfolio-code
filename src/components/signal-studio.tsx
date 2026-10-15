@@ -7,9 +7,9 @@ import { ArrowUpRight, Database, ChartNoAxesCombined, Landmark, Pause, Play } fr
 import { visualPalettes } from '@/content/visual-palettes';
 
 const disciplines = [
-  {name:'Data', title:'Build the foundation.', subtitle:'ORDER FROM COMPLEXITY', description:'Reliable pipelines. Thoughtful architecture. Data that is ready for what comes next.', tools:['SQL','Python','PySpark','Microsoft Fabric'], href:'/projects/enterprise-data-engineering', link:'Explore the architecture', icon:Database, labels:['Sources','Ingest','Bronze','Silver','Gold','Insight']},
-  {name:'Analytics', title:'Find the signal.', subtitle:'PATTERNS INTO PERSPECTIVE', description:'Business intelligence and statistical analysis that turn complex information into useful decisions.', tools:['Power BI','Visualization','KPI reporting','Statistics'], href:'/projects/dubuque-street-conditions', link:'Explore the analysis', icon:ChartNoAxesCombined, labels:['Observe','Compare','Understand']},
-  {name:'Finance', title:'Understand the impact.', subtitle:'A WIDER VIEW OF THE OUTCOME', description:'Financial models, economic research, and banking experience grounded in real business questions.', tools:['Financial analysis','Economics','Stress testing','FBLA'], href:'/projects/household-financial-stress-testing', link:'Explore the research', icon:Landmark, labels:['Mild','Moderate','Severe']},
+  {name:'Data', title:'Data engineering.', subtitle:'FROM API TO REPORT', description:'Fabric pipelines, SQL transformations, and Lakehouse models.', tools:['SQL','Python','PySpark','Microsoft Fabric'], href:'/projects/enterprise-data-engineering', link:'View data engineering project', icon:Database, labels:['Sources','Ingest','Bronze','Silver','Gold','Insight']},
+  {name:'Analytics', title:'Reporting & analysis.', subtitle:'REPORTING AND STATISTICS', description:'Power BI dashboards, KPI reporting, and statistical analysis.', tools:['Power BI','Visualization','KPI reporting','Statistics'], href:'/projects/dubuque-street-conditions', link:'View street analysis', icon:ChartNoAxesCombined, labels:['Observe','Compare','Understand']},
+  {name:'Finance', title:'Finance & economics.', subtitle:'STRESS SCENARIOS', description:'Household stress testing, economic research, and banking experience.', tools:['Financial analysis','Economics','Stress testing','FBLA'], href:'/projects/household-financial-stress-testing', link:'View stress-testing project', icon:Landmark, labels:['Mild','Moderate','Severe']},
 ] as const;
 
 const nodeIds = Array.from({length:48},(_,i)=>i);
@@ -32,7 +32,7 @@ export default function SignalStudio(){
   const transition={duration:reduced?0:.85,ease:'easeInOut' as const};
   function select(index:number,focus=false){setSelected(index);if(focus)document.getElementById(`${id}-tab-${index}`)?.focus();}
   return <div className="signal-studio">
-    <div className="signal-header"><div><span className="signal-live-dot"/><span className="eyebrow">THE INTERACTIVE EDITION</span></div><span className="mono">THREE DISCIPLINES / ONE CONNECTED MIND</span></div>
+    <div className="signal-header"><div><span className="signal-live-dot"/><span className="eyebrow">EXPLORE MY WORK</span></div><span className="mono">DATA / ANALYTICS / FINANCE</span></div>
     <div className="signal-body">
       <div className="signal-visual" data-running={running} onPointerMove={event=>{const r=event.currentTarget.getBoundingClientRect();event.currentTarget.style.setProperty('--signal-x',`${event.clientX-r.left}px`);event.currentTarget.style.setProperty('--signal-y',`${event.clientY-r.top}px`);}}>
         <div className="signal-visual-top"><span className="mono">0{selected+1} / {current.subtitle}</span><button className="signal-pause" onClick={()=>setPaused(!paused)} aria-label={running?'Pause visual animation':'Play visual animation'} disabled={Boolean(reduced)} title={reduced?'Reduced motion is enabled':undefined}>{running?<Pause size={13}/>:<Play size={13}/>}<span>{reduced?'Reduced motion':running?'Pause':'Play'}</span></button></div>
@@ -50,7 +50,7 @@ export default function SignalStudio(){
           {nodeIds.map(i=>{const p=position(i,selected);return <motion.circle key={i} initial={false} animate={{cx:p.x,cy:p.y,r:selected===0?(i%8===0?6:3.5):selected===1?4:5,fill:palette.colors[i%4]}} transition={transition}/>;})}
           {selected===0&&<g className="signal-stage-labels">{current.labels.map((label,i)=><text key={label} x={125+i*110} y="365" textAnchor="middle">{label}</text>)}</g>}
           {selected===1&&<g className="signal-stage-labels"><text x="95" y="368">OBSERVE</text><text x="700" y="368" textAnchor="end">UNDERSTAND →</text></g>}
-          {selected===2&&<g className="signal-stage-labels"><text x="400" y="24" textAnchor="middle">EXPLORE THE RANGE OF POSSIBLE OUTCOMES</text><text x="400" y="395" textAnchor="middle">MILD / MODERATE / SEVERE</text></g>}
+          {selected===2&&<g className="signal-stage-labels"><text x="400" y="24" textAnchor="middle">HOUSEHOLD STRESS SCENARIOS</text><text x="400" y="395" textAnchor="middle">MILD / MODERATE / SEVERE</text></g>}
           <g className="signal-scan" aria-hidden="true"><path d="M65 45V335" stroke={palette.colors[0]} strokeWidth="1" strokeDasharray="4 6" opacity=".5"/></g>
         </svg>
         <div className="signal-visual-bottom"><span className="mono">CONCEPTUAL ART / NO LIVE DATA</span><div className="signal-swatches" aria-hidden="true">{palette.colors.map(color=><span key={color} style={{background:color}}/>)}</div></div>

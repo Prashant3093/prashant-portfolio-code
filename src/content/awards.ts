@@ -5,7 +5,7 @@ export const awards = [
     "event": "FBLA State Championship",
     "category": "Computer Science & Economics",
     "type": "gold",
-    "detail": "Combined event wording preserved from the supplied resume; separate events are not established."
+    "detail": ""
   },
   {
     "year": "2025",
@@ -16,11 +16,11 @@ export const awards = [
     "detail": "Second place at the state level."
   },
   {
-    "year": "Year to confirm",
+    "year": "Year not listed",
     "title": "9th Place Nationally",
     "event": "FBLA National Championship",
     "category": "Economics",
     "type": "national",
-    "detail": "Top 10 national finish, supplied in the portfolio brief. The year was not documented in either resume."
+    "detail": "Top 10 national finish in Economics."
   }
 ] as const;
